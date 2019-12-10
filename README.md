@@ -1,6 +1,11 @@
 ### Gamedoora Incubator
 Docker files to setup and run the gamedoora app
 
+##### STEPS TO RUN:
+1.```docker-compose build```
+2. ```docker-compose up -d```
+3. ```docker-compose logs -f```
+
 ##Most used docker commands:
 1. ```docker-compose build``` to build all applications
 2. ```docker-compose build <application_name>``` to build particular application
@@ -22,3 +27,4 @@ Docker files to setup and run the gamedoora app
 18. ```docker rmi $(docker images -a -q)``` to remove all the images
 
 #####Reference: https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
+
