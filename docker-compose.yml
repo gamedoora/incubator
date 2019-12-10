@@ -22,21 +22,17 @@ services:
 
 # TODO
 # react app config Pending
-#  frontend:
-#    build:
-#      context: ../gamedoora-frontend
-#
-#    depends_on:
-#      - "mysql"
-#      - "redis"
-#    ports:
-#      - "8000:8000"
-#    volumes:
-#      - .:/patakafrontend
-#    restart: always
-#    links:
-#      - redis
-#      - mysql
+  frontend:
+    build:
+      context: ../gamedoora-frontend
+    ports:
+      - "5000:5000"
+    volumes:
+      - '.:/frontend'
+      - '/frontend/node_modules'
+    restart: always
+    environment:
+      NODE_ENV: development
 
   api:
     build:
